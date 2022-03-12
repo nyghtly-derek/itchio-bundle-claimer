@@ -11,9 +11,9 @@ describe('itchio-clicker', () => {
     cy.contains('button', 'Log in').click()
     cy.visit('/my-purchases/bundles')
     cy.contains('a', Cypress.env('bundleName')).click()
-    cy.get('.pager_label a').invoke('text').then(($page_count) => {
+    cy.get('.pager_label a').eq(0).invoke('text').then(($page_count) => {
       for (let i = 2; i < Number($page_count); i++) {
-        cy.task('log', `page ${i - 1}`)
+        cy.task('log', `page ${i - 1} of ${$page_count}`)
         claim_all()
         cy.get('a.next_page').eq(0).click()
       }
