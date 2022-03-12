@@ -1,15 +1,29 @@
 # itchio-bundle-claimer
 Auto-claim all games from an itch.io bundle, adding them to your library. For example, "Bundle for Ukraine."
 
+# Prerequisites
+https://nodejs.org/en/download/
+
 # How to Use
-1. Add a `secrets.json` file to the root directory:
+On Command Line:
+
+1. `git clone https://github.com/nyghtly-derek/itchio-bundle-claimer.git`
+
+2. `cd itchio-bundle-claimer`
+
+3. `npm install`
+
+4. `touch secrets.json`
+
+5. Add your credentials to `secrets.json`:
 ```
 {
   "username": "my_username",
   "password": "totally secret"
 }
 ```
-2. Configure bundle name in `cypress.json`:
+
+6. Configure bundle name in `cypress.json`:
 ```
 {
   ...
@@ -19,8 +33,8 @@ Auto-claim all games from an itch.io bundle, adding them to your library. For ex
   ...
 }
 ```
-3. `npm install`
-4. `npx cypress open`
+
+7. `npx cypress open`
     - Alternatively, `npx cypress run` for headless.
     - If you encounter an error during the run, then you can simply retry. 
       - The robot will only claim games that haven't been claimed yet. 
