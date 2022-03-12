@@ -5,6 +5,7 @@
     },
     "pageLoadTimeout": 180000,
     "redirectionLimit": 9001,
+    "retries": 30,
     "video": false,
     "watchForFileChanges": false
 }
