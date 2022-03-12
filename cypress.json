@@ -3,7 +3,7 @@
     "env": {
         "bundleName": "Bundle for Ukraine"
     },
-    "pageLoadTimeout": 120000,
+    "pageLoadTimeout": 180000,
     "redirectionLimit": 9001,
     "watchForFileChanges": false
 }
