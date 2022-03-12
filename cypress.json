@@ -1,9 +1,9 @@
 {
     "baseUrl": "https://itch.io/",
     "env": {
-        "password": "",
-        "username": ""
+        "bundleName": "Bundle for Ukraine"
     },
-    "watchForFileChanges": false,
-    "redirectionLimit": 9001
+    "pageLoadTimeout": 120000,
+    "redirectionLimit": 9001,
+    "watchForFileChanges": false
 }

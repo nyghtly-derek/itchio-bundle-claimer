@@ -9,7 +9,7 @@ describe('itchio-clicker', () => {
     })
     cy.contains('button', 'Log in').click()
     cy.visit('/my-purchases/bundles')
-    cy.contains('a', 'Bundle for Ukraine').click()
+    cy.contains('a', Cypress.env('bundleName')).click()
     cy.get('.pager_label a').invoke('text').then(($page_count) => {
       for (let i = 2; i < Number($page_count); i++) {
         claim_all()

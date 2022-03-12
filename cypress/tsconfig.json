@@ -10,7 +10,6 @@
         "moduleResolution": "node",
         "skipLibCheck": true,
         "strict": true,
-        // "target": "es2016",
         "target": "es6",
         "types": [
             "cypress",
