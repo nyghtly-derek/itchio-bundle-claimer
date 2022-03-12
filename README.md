@@ -36,5 +36,6 @@ On Command Line:
 
 7. `npx cypress open`
     - Alternatively, `npx cypress run` for headless.
-    - If you encounter an error during the run, then you can simply retry. 
-      - The robot will only claim games that haven't been claimed yet. 
+    - Make sure the authentication works before you walk away.
+    - The robot will automatically retry if it encounters any errors.
+      - It will only claim games that haven't been claimed yet. 
