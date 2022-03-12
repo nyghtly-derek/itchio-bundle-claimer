@@ -1,6 +1,9 @@
 # itchio-bundle-claimer
 Auto-claim all games from an itch.io bundle, adding them to your library. For example, "Bundle for Ukraine."
 
+# Pre-requisites
+https://nodejs.org/en/download/
+
 # How to Use
 1. Add a `secrets.json` file to the root directory:
 ```
