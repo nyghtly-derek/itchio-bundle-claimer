@@ -1,0 +1,9 @@
+{
+    "baseUrl": "https://itch.io/",
+    "env": {
+        "password": "",
+        "username": ""
+    },
+    "watchForFileChanges": false,
+    "redirectionLimit": 9001
+}

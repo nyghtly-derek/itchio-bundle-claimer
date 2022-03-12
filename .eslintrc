@@ -1,0 +1,36 @@
+{
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+        "airbnb"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": 2021
+    },
+    "plugins": [
+        "@typescript-eslint"
+    ],
+    "root": true,
+    "rules": {
+        "camelcase": "off",
+        "linebreak-style": [
+            "off"
+        ],
+        "no-plusplus": [
+            "error",
+            {
+                "allowForLoopAfterthoughts": true
+            }
+        ],
+        "no-undef": [
+            "off"
+        ],
+        "no-use-before-define": "off",
+        "semi": [
+            "error",
+            "never"
+        ]
+    }
+}
