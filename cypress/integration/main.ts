@@ -6,12 +6,14 @@ describe('itchio-clicker', () => {
     cy.readFile(secret_path).then(($json) => {
       cy.get('[name=username]').type($json.username)
       cy.get('[name=password]').type($json.password)
+      cy.task('log', `log in as ${$json.username}`)
     })
     cy.contains('button', 'Log in').click()
     cy.visit('/my-purchases/bundles')
     cy.contains('a', Cypress.env('bundleName')).click()
     cy.get('.pager_label a').invoke('text').then(($page_count) => {
       for (let i = 2; i < Number($page_count); i++) {
+        cy.task('log', `page ${i - 1}`)
         claim_all()
         cy.get('a.next_page').eq(0).click()
       }
