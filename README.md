@@ -38,4 +38,3 @@ On Command Line:
     - Alternatively, `npx cypress run` for headless.
     - Make sure the authentication works before you walk away.
     - The robot will automatically retry if it encounters any errors.
-      - It will only claim games that haven't been claimed yet. 
