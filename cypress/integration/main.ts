@@ -12,11 +12,12 @@ describe('itch.io bundle claimer', () => {
     cy.visit('/my-purchases/bundles')
     cy.contains('a', Cypress.env('bundleName')).click()
     cy.get('.pager_label a').eq(0).invoke('text').then(($page_count) => {
-      for (let i = 2; i < Number($page_count); i++) {
-        cy.task('log', `page ${i - 1} of ${$page_count}`)
+      for (let i = 1; i < Number($page_count); i++) {
+        cy.task('log', `page ${i} of ${$page_count}`)
         claim_all()
         cy.get('a.next_page').eq(0).click()
       }
+      claim_all()
     })
   })
 
