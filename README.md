@@ -5,7 +5,7 @@ Auto-claim all games from an itch.io bundle, adding them to your library. For ex
 https://nodejs.org/en/download/
 
 # How to Use
-1. Add a `secrets.json` file to the root directory:
+1. Add a `secrets.json` file to the root directory of this repository:
 ```
 {
   "username": "my_username",
