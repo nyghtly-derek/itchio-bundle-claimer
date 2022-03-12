@@ -1,7 +1,7 @@
 const secret_path = './secret.json'
 
-describe('itchio-clicker', () => {
-  it('downloads everything', () => {
+describe('itch.io bundle claimer', () => {
+  it('claims everything', () => {
     cy.visit('/login')
     cy.readFile(secret_path).then(($json) => {
       cy.get('[name=username]').type($json.username)
