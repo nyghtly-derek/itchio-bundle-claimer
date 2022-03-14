@@ -13,9 +13,9 @@ On Command Line:
 
 3. `npm install`
 
-4. `touch secrets.json`
+4. `touch secret.json`
 
-5. Add your credentials to `secrets.json`:
+5. Add your credentials to `secret.json`:
 ```
 {
   "username": "my_username",
