@@ -4,7 +4,7 @@ Auto-claim all games from an itch.io bundle, adding them to your library. For ex
 # How to Use
 
 ## Prerequisites
-https://nodejs.org/en/download/
+[Download Node.js](https://nodejs.org/en/download/)
 
 ## Step-by-Step
 On Command Line:
