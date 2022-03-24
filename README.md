@@ -1,10 +1,12 @@
 # itchio-bundle-claimer
 Auto-claim all games from an itch.io bundle, adding them to your library. For example, "Bundle for Ukraine."
 
-# Prerequisites
+# How to Use
+
+## Prerequisites
 https://nodejs.org/en/download/
 
-# How to Use
+## Step-by-Step
 On Command Line:
 
 1. `git clone https://github.com/nyghtly-derek/itchio-bundle-claimer.git`
@@ -39,5 +41,5 @@ On Command Line:
     - Make sure the authentication works before you walk away.
     - The robot will automatically retry if it encounters any errors.
 
-# Two Factor Authentication (2FA)
+## Two Factor Authentication (2FA)
 You will need to [disable this temporarily](https://itch.io/user/settings/two-factor-auth) for the script to work.
