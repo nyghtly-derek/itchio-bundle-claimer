@@ -42,4 +42,4 @@ On Command Line:
     - The robot will automatically retry if it encounters any errors.
 
 ## Two Factor Authentication (2FA)
-You will need to [disable this temporarily](https://itch.io/user/settings/two-factor-auth) for the script to work.
+You will need to [disable this temporarily](https://itch.io/user/settings/two-factor-auth) for the script to work. Make sure you turn it back on when you're done. I will be adding support for this in the future.
