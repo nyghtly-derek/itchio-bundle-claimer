@@ -38,3 +38,6 @@ On Command Line:
     - Alternatively, `npx cypress run` for headless.
     - Make sure the authentication works before you walk away.
     - The robot will automatically retry if it encounters any errors.
+
+# Two Factor Authentication (2FA)
+You will need to [disable this temporarily](https://itch.io/user/settings/two-factor-auth) for the script to work.
