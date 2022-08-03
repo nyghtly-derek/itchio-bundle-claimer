@@ -25,7 +25,7 @@ On Command Line:
 }
 ```
 
-6. Configure bundle name in `cypress.json`:
+6. Configure bundle name in `cypress.config.json`:
 ```
 {
   ...
@@ -36,7 +36,7 @@ On Command Line:
 }
 ```
 
-7. `npx cypress open`
+7. `npx cypress open --e2e --browser chrome`
     - Alternatively, `npx cypress run` for headless.
     - Make sure the authentication works before you walk away.
     - The robot will automatically retry if it encounters any errors.
