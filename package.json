@@ -1,17 +1,17 @@
 {
   "scripts": {
     "force-reinstall": "rm -rf package-lock.json && rm -rf node_modules && npm install",
-    "upgrade": "npx npm-check-updates && npm run force-reinstall"
+    "upgrade": "npx npm-check-updates -u && npm run force-reinstall"
   },
   "dependencies": {
-    "@types/node": "^20.4.2",
-    "@typescript-eslint/eslint-plugin": "^6.0.0",
-    "@typescript-eslint/parser": "^6.0.0",
-    "cypress": "^12.17.1",
-    "eslint": "^8.44.0",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-plugin-snakecasejs": "^2.2.0",
-    "npm-check-updates": "^16.10.15",
-    "typescript": "^5.1.6"
+    "@types/node": "20.8.7",
+    "@typescript-eslint/eslint-plugin": "6.8.0",
+    "@typescript-eslint/parser": "6.8.0",
+    "cypress": "13.3.2",
+    "eslint": "8.51.0",
+    "eslint-config-airbnb": "19.0.4",
+    "eslint-plugin-snakecasejs": "2.2.0",
+    "npm-check-updates": "16.14.6",
+    "typescript": "5.2.2"
   }
 }
