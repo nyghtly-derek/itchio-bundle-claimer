@@ -25,7 +25,7 @@ On Command Line:
 }
 ```
 
-6. Configure bundle name in `cypress.config.json`:
+6. Configure bundle name in `cypress.config.ts`:
 ```
 {
   ...
