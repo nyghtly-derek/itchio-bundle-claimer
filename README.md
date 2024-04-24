@@ -50,5 +50,4 @@ You will need to [disable this temporarily](https://itch.io/user/settings/two-fa
 
 
 ### Quickly cycles through every page of the bundle without clicking anything
-
 This is expected behavior if you've already claimed all of the items in the bundle. We expect the script to skip any games that have been claimed. Unclaimed games have a "Claim" button. Claimed games have a "Download" button.
