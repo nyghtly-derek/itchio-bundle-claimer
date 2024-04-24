@@ -15,7 +15,9 @@ On Command Line:
 
 3. `npm install`
 
-4. `touch secret.json`
+4. Create secrets file:
+    - Mac / Linux: `touch secret.json`
+    - Windows: `copy nul "secret.json"`
 
 5. Add your credentials to `secret.json`:
 ```
@@ -42,4 +44,4 @@ On Command Line:
     - The robot will automatically retry if it encounters any errors.
 
 ## Two Factor Authentication (2FA)
-You will need to [disable this temporarily](https://itch.io/user/settings/two-factor-auth) for the script to work. Make sure you turn it back on when you're done. I will be adding support for this in the future.
+You will need to [disable this temporarily](https://itch.io/user/settings/two-factor-auth) for the script to work. Make sure you turn it back on when you're done. I'm hoping to add support for this in the future.
