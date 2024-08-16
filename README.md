@@ -48,6 +48,8 @@ On Command Line:
 ### Two Factor Authentication (2FA)
 You will need to [disable this temporarily](https://itch.io/user/settings/two-factor-auth) for the script to work. Make sure you turn it back on when you're done. I'm hoping to add support for this in the future.
 
-
 ### Quickly cycles through every page of the bundle without clicking anything
 This is expected behavior if you've already claimed all of the items in the bundle. We expect the script to skip any games that have been claimed. Unclaimed games have a "Claim" button. Claimed games have a "Download" button.
+
+### Gets stuck on a page and requires manual intervention
+I've heard some reports of this behavior, but I'm not sure what's happening. Please take a full-page screenshot and report as an issue.
