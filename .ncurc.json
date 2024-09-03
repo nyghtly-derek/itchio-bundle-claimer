@@ -1,0 +1,10 @@
+{
+  "upgrade": true,
+  "reject": [
+    "eslint",
+    "eslint-config-airbnb",
+    "eslint-plugin-snakecasejs",
+    "@typescript-eslint/parser",
+    "@typescript-eslint/eslint-plugin"
+  ]
+}
