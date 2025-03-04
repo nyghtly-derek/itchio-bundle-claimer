@@ -52,7 +52,7 @@ You will need to [disable this temporarily](https://itch.io/user/settings/two-fa
 For example, Cypress would print the error message "command was expected to run against origin https://itch.io, but the application is at origin https://foo.itch.io." This error will happen if you are using a Cypress version greater than 13. To solve this, all we need to do is install the same version of Cypress that is pinned in package.json. Here's one way of doing that:
 
 ```bash
-npm run force-reinstall
+npm run force-clean-install
 npx cypress open --e2e --browser chrome
 ```
 

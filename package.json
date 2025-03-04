@@ -1,6 +1,7 @@
 {
   "scripts": {
     "force-reinstall": "rm -rf package-lock.json && rm -rf node_modules && npm install",
+    "force-clean-install": "rm -rf node_modules && npm clean-install",
     "upgrade": "npx npm-check-updates -u && npm run force-reinstall"
   },
   "dependencies": {
