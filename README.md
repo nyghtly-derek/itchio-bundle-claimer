@@ -13,7 +13,7 @@ On Command Line:
 
 2. `cd itchio-bundle-claimer`
 
-3. `npm install`
+3. `npm clean-install`
 
 4. Create secrets file:
     - Mac / Linux: `touch secret.json`
