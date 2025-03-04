@@ -13,7 +13,7 @@ On Command Line:
 
 2. `cd itchio-bundle-claimer`
 
-3. `npm install`
+3. `npm clean-install`
 
 4. Create secrets file:
     - Mac / Linux: `touch secret.json`
@@ -48,8 +48,18 @@ On Command Line:
 ### Two Factor Authentication (2FA)
 You will need to [disable this temporarily](https://itch.io/user/settings/two-factor-auth) for the script to work. Make sure you turn it back on when you're done. I'm hoping to add support for this in the future.
 
+### Claims a single game and then errors out with message about subdomain
+For example, Cypress would print the error message "command was expected to run against origin https://itch.io, but the application is at origin https://foo.itch.io." This error will happen if you are using a Cypress version greater than 13. To solve this, all we need to do is install the same version of Cypress that is pinned in package.json. Here's one way of doing that:
+
+```bash
+npm run force-clean-install
+npx cypress open --e2e --browser chrome
+```
+
+See [issue 25](https://github.com/nyghtly-derek/itchio-bundle-claimer/issues/25) for more detail.
+
 ### Quickly cycles through every page of the bundle without clicking anything
-This is expected behavior if you've already claimed all of the items in the bundle. We expect the script to skip any games that have been claimed. Unclaimed games have a "Claim" button. Claimed games have a "Download" button.
+This is expected behavior if you've already claimed all of the items in the bundle. We expect the script to skip any games that have been claimed. Both unclaimed and claimed games have a "Download" button, although the html underneath is different between the two.
 
 ### Gets stuck on a page and requires manual intervention
 I've heard some reports of this behavior, but I'm not sure what's happening. Please take a full-page screenshot and report as an issue.
