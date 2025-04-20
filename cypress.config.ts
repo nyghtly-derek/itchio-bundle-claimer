@@ -9,7 +9,7 @@ export default defineConfig({
   retries: 0,
   video: false,
   watchForFileChanges: false,
-  numTestsKeptInMemory: 5,
+  numTestsKeptInMemory: 0,
   experimentalMemoryManagement: true,
   injectDocumentDomain: true,
   e2e: {
