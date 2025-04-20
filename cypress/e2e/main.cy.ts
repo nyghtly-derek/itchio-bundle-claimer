@@ -1,3 +1,5 @@
+import { TOTP } from "totp-generator"
+
 const secret_path = './secret.json'
 
 describe('itch.io bundle claimer', () => {
@@ -7,6 +9,11 @@ describe('itch.io bundle claimer', () => {
       cy.get('[name=username]').type($json.username)
       cy.get('[name=password]').type($json.password)
       cy.task('log', `log in as ${$json.username}`)
+    })
+    cy.contains('button', 'Log in').click()
+    cy.readFile(secret_path).then(($json) => {
+      const { otp } = TOTP.generate($json.totp)
+      cy.get('[name=code]').type(otp)
     })
     cy.contains('button', 'Log in').click()
     cy.visit('/my-purchases/bundles')
