@@ -11,11 +11,17 @@ describe('itch.io bundle claimer', () => {
       cy.task('log', `log in as ${$json.username}`)
     })
     cy.contains('button', 'Log in').click()
-    cy.readFile(secret_path).then(($json) => {
-      const { otp } = TOTP.generate($json.totp)
-      cy.get('[name=code]').type(otp)
+    cy.get('body').then(($body) => {
+      cy.get('h2').then(($h2) => {
+        if($h2.text()=='Two-factor authentication') {
+          cy.readFile(secret_path).then(($json) => {
+            const { otp } = TOTP.generate($json.totp)
+            cy.get('[name=code]').type(otp)
+          })
+          cy.contains('button', 'Log in').click()
+        }
+      })
     })
-    cy.contains('button', 'Log in').click()
     cy.visit('/my-purchases/bundles')
     cy.contains('a', Cypress.env('bundleName')).click()
     cy.get('.pager_label a').eq(0).invoke('text').then(($page_count) => {
