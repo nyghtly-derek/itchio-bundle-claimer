@@ -1,5 +1,5 @@
 # itchio-bundle-claimer
-Auto-claim all games from an itch.io bundle, adding them to your library. For example, "Bundle for Ukraine."
+Auto-claim all games from an itch.io bundle, adding them to your library. For example, "Bundle for Ukraine" or "Bundle for Racial Justice and Equality".
 
 ## How to Use
 
@@ -23,7 +23,8 @@ On Command Line:
 ```
 {
   "username": "my_username",
-  "password": "totally secret"
+  "password": "totally secret",
+  "totp": "base32 string"
 }
 ```
 
@@ -32,31 +33,18 @@ On Command Line:
 {
   ...
   "env": {
-    "bundleName": "Bundle for Ukraine"
+    "bundleName": "Bundle for Racial Justice and Equality"
   },
   ...
 }
 ```
 
-7. `npx cypress open --e2e --browser chrome`
+7. `npx cypress open --e2e --browser electron`
     - Alternatively, `npx cypress run` for headless.
     - Make sure the authentication works before you walk away.
     - The robot will automatically retry if it encounters any errors.
 
 ## Troubleshooting
-
-### Two Factor Authentication (2FA)
-You will need to [disable this temporarily](https://itch.io/user/settings/two-factor-auth) for the script to work. Make sure you turn it back on when you're done. I'm hoping to add support for this in the future.
-
-### Claims a single game and then errors out with message about subdomain
-For example, Cypress would print the error message "command was expected to run against origin https://itch.io, but the application is at origin https://foo.itch.io." This error will happen if you are using a Cypress version greater than 13. To solve this, all we need to do is install the same version of Cypress that is pinned in package.json. Here's one way of doing that:
-
-```bash
-npm run force-clean-install
-npx cypress open --e2e --browser chrome
-```
-
-See [issue 25](https://github.com/nyghtly-derek/itchio-bundle-claimer/issues/25) for more detail.
 
 ### Quickly cycles through every page of the bundle without clicking anything
 This is expected behavior if you've already claimed all of the items in the bundle. We expect the script to skip any games that have been claimed. Both unclaimed and claimed games have a "Download" button, although the html underneath is different between the two.
