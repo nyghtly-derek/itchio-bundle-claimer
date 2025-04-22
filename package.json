@@ -2,18 +2,20 @@
   "scripts": {
     "force-reinstall": "rm -rf package-lock.json && rm -rf node_modules && npm install",
     "force-clean-install": "rm -rf node_modules && npm clean-install",
-    "upgrade": "npx npm-check-updates -u && npm run force-reinstall"
+    "upgrade": "npx npm-check-updates -u && npm run force-reinstall",
+    "format": "npx eslint --fix && npx prettier . --write && npx eslint . && npx prettier . --check"
   },
   "dependencies": {
-    "@types/node": "22.5.2",
+    "@types/node": "22.14.1",
     "@typescript-eslint/eslint-plugin": "7.0.1",
     "@typescript-eslint/parser": "7.0.1",
     "cypress": "14.3.1",
     "eslint": "8.56.0",
     "eslint-config-airbnb": "19.0.4",
     "eslint-plugin-snakecasejs": "2.2.0",
-    "npm-check-updates": "17.1.1",
+    "npm-check-updates": "18.0.0",
+    "prettier": "^3.5.3",
     "totp-generator": "^1.0.0",
-    "typescript": "5.5.4"
+    "typescript": "5.8.3"
   }
 }
