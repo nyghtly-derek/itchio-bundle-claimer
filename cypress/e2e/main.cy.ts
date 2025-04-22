@@ -8,7 +8,7 @@ describe('itch.io bundle claimer', () => {
     cy.readFile(secret_path).then(($json) => {
       cy.get('[name=username]').type($json.username)
       cy.get('[name=password]').type($json.password)
-      cy.task('log', `log in as ${$json.username}`)
+      cy.log(`log in as ${$json.username}`)
     })
     cy.contains('button', 'Log in').click()
     cy.get('h2').then(($h2) => {
@@ -26,11 +26,11 @@ describe('itch.io bundle claimer', () => {
       .eq(0)
       .invoke('text')
       .then(($page_count) => {
-        cy.task('log', `page 1 of ${$page_count}`)
+        cy.log(`page 1 of ${$page_count}`)
         claim_all()
         for (let i = 1; i < Number($page_count); i++) {
           cy.get('a.next_page').eq(0).click()
-          cy.task('log', `page ${i + 1} of ${$page_count}`)
+          cy.log(`page ${i + 1} of ${$page_count}`)
           claim_all()
         }
       })
