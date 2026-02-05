@@ -1,5 +1,7 @@
 # itchio-bundle-claimer
 
+:WARNING: This tool no longer works. It appears that itch.io is (correctly) identifying Cypress as a bot and preventing access to `/login`. As such, I will archive this repository. See this [issue](https://github.com/nyghtly-derek/itchio-bundle-claimer/issues/32) for more info.
+
 Auto-claim all games from an itch.io bundle, adding them to your library. For example, "Bundle for Ukraine" or "Bundle for Racial Justice and Equality".
 
 ## How to Use
